@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/arm 5.7.0-rc5 Kernel Configuration
+# Linux/arm 5.7.0 Kernel Configuration
 #
 
 #
@@ -5873,7 +5873,7 @@ CONFIG_MMC_SDHCI_BCM_KONA=y
 # CONFIG_MMC_SDHCI_MILBEAUT is not set
 CONFIG_MMC_SDHCI_IPROC=y
 # CONFIG_MMC_MESON_GX is not set
-# CONFIG_MMC_MESON_MX_SDHC is not set
+CONFIG_MMC_MESON_MX_SDHC=y
 CONFIG_MMC_MESON_MX_SDIO=y
 CONFIG_MMC_SDHCI_ST=y
 CONFIG_MMC_OMAP=y
