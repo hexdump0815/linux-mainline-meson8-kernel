@@ -1,0 +1,18 @@
+diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
+index 86db87735880..0212c5ef5162 100644
+--- a/arch/arm/boot/dts/Makefile
++++ b/arch/arm/boot/dts/Makefile
+@@ -338,11 +338,13 @@ dtb-$(CONFIG_MACH_MESON6) += \
+ 	meson6-atv1200.dtb
+ dtb-$(CONFIG_MACH_MESON8) += \
+ 	meson8-minix-neo-x8.dtb \
++	meson8-mxiii.dtb \
+ 	meson8b-ec100.dtb \
+ 	meson8b-mxq.dtb \
+ 	meson8b-odroidc1.dtb \
+ 	meson8m2-mxiii.dtb \
+ 	meson8m2-mxiii-plus.dtb \
++	meson8m2-m8s-dvfs.dtb \
+ 	meson8m2-m8s.dtb
+ dtb-$(CONFIG_ARCH_MMP) += \
+ 	pxa168-aspenite.dtb \
