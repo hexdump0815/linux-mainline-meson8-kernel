@@ -1,0 +1,14 @@
+diff --git a/drivers/mmc/host/meson-mx-sdhc.c b/drivers/mmc/host/meson-mx-sdhc.c
+index 288bfc54c20e..fa0addf50371 100644
+--- a/drivers/mmc/host/meson-mx-sdhc.c
++++ b/drivers/mmc/host/meson-mx-sdhc.c
+@@ -597,8 +597,7 @@ static irqreturn_t meson_mx_sdhc_irq_thread(int irq, void *irq_data)
+ 
+ 			val = FIELD_PREP(MESON_SDHC_PDMA_RXFIFO_MANUAL_FLUSH,
+ 					 2);
+-			regmap_update_bits(host->regmap, MESON_SDHC_PDMA,
+-					   MESON_SDHC_PDMA_RXFIFO_MANUAL_FLUSH,
++			regmap_update_bits(host->regmap, MESON_SDHC_PDMA, val,
+ 					   val);
+ 		}
+ 
