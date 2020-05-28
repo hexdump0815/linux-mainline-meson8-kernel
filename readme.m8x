@@ -9,14 +9,16 @@
 patch -p1 < /compile/doc/stable-xd/misc.m8x/gen-stmmac-mac-addr-on-kernel-cmdline-v5.3.patch
 # add pwms for m8s-dvfs - https://freenode.irclog.whitequark.org/linux-amlogic/2020-05-01#26937776
 patch -p1 < /compile/doc/stable-xd/misc.m8x/add-extra-pwms-to-meson8.patch
-# fix sd card
-patch -p1 < /compile/doc/stable-xd/misc.m8x/mmc-fix.patch
+# fix sd card - no longer required for meson-mx-integration-5.8-20200523 - already in there
+#patch -p1 < /compile/doc/stable-xd/misc.m8x/mmc-fix.patch
+# fix eth initialization
+patch -p1 < /compile/doc/stable-xd/misc.m8x/eth-fix.patch
 # add more dtbs: m8s with dvfs via pwm and mxiii based on m8 and not m8m2
 patch -p1 < /compile/doc/stable-xd/misc.m8x/add-extra-dtbs-to-dts-makefile.patch
 cp /compile/doc/stable-xd/misc.m8x/dtb/*.dts* arch/arm/boot/dts
 # strip the extra version from the makefile as the old u-boot does
 # not seem to be able to boot the resulting long filenames :) 
-sed 's,EXTRAVERSION =.*,EXTRAVERSION =,g' Makefile
+sed -i 's,EXTRAVERSION =.*,EXTRAVERSION =,g' Makefile
 
 cp /compile/doc/stable-xd/config.m8x /compile/source/linux-stable-xd/.config
 cd /compile/source/linux-stable-xd
