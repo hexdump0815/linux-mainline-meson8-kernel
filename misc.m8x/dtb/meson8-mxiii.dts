@@ -58,7 +58,9 @@
 	status = "okay";
 
 	pinctrl-0 = <&sdxc_b_pins>;
-	pinctrl-names = "default";
+	pinctrl-1 = <&sd_b_pins>; /* put in the reference that was
+originally used for the SDIO controller */
+	pinctrl-names = "default", "sleep";
 
 	bus-width = <4>;
 	max-frequency = <50000000>;
