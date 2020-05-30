@@ -17,7 +17,7 @@ patch -p1 < /compile/doc/stable-xd/misc.m8x/eth-fix.patch
 patch -p1 < /compile/doc/stable-xd/misc.m8x/add-extra-dtbs-to-dts-makefile.patch
 cp /compile/doc/stable-xd/misc.m8x/dtb/*.dts* arch/arm/boot/dts
 # minimal s805 overclocking
-patch -p1 < /compile/doc/stable-xd/misc.m8x/minimal-s805-overclocking.patch
+#patch -p1 < /compile/doc/stable-xd/misc.m8x/minimal-s805-overclocking.patch
 # strip the extra version from the makefile as the old u-boot does
 # not seem to be able to boot the resulting long filenames :) 
 sed -i 's,EXTRAVERSION =.*,EXTRAVERSION =,g' Makefile
