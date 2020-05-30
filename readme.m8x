@@ -13,6 +13,8 @@ patch -p1 < /compile/doc/stable-xd/misc.m8x/add-extra-pwms-to-meson8.patch
 #patch -p1 < /compile/doc/stable-xd/misc.m8x/mmc-fix.patch
 # fix eth initialization
 patch -p1 < /compile/doc/stable-xd/misc.m8x/eth-fix.patch
+# fix mmc broken in u-boot after reboot at least on meson8-mxiii
+patch -p1 < /compile/doc/stable-xd/misc.m8x/fix-mmc-on-reboot.patch
 # add more dtbs: m8s with dvfs via pwm and mxiii based on m8 and not m8m2
 patch -p1 < /compile/doc/stable-xd/misc.m8x/add-extra-dtbs-to-dts-makefile.patch
 cp /compile/doc/stable-xd/misc.m8x/dtb/*.dts* arch/arm/boot/dts
@@ -75,7 +77,7 @@ bootm 0x14000000 0x15000000 0x11800000
 setenv kver 5.7.0-xdl-m8x+
 # legacy u-boot seems to be able to only handle filenames up to 23 chars, so short some names
 setenv kver-short 5.7.0-s-m+
-setenv bootargs "console=ttyAML0,115200 root=/dev/mmcblk0p3 rootwait ro loglevel=8 fsck.repair=yes net.ifnames=0 ipv6.disable=1 stmmac.macaddr=00:1d:72:64:21:53 noresume"
+setenv bootargs "console=ttyAML0,115200 root=/dev/mmcblk0p3 rootwait ro loglevel=8 fsck.repair=yes net.ifnames=0 ipv6.disable=1 stmmac.macaddr=00:4d:72:64:21:53 noresume"
 # kernel etc. on mmc
 # this is to startup the mmc
 mmcinfo
