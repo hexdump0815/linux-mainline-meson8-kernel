@@ -13,8 +13,10 @@ patch -p1 < /compile/doc/stable-xd/misc.m8x/add-extra-pwms-to-meson8.patch
 #patch -p1 < /compile/doc/stable-xd/misc.m8x/mmc-fix.patch
 # fix eth initialization
 patch -p1 < /compile/doc/stable-xd/misc.m8x/eth-fix.patch
-# fix mmc broken in u-boot after reboot at least on meson8-mxiii
+# fix mmc broken in u-boot after reboot at least on meson8-mxiii - does not seem to work
 patch -p1 < /compile/doc/stable-xd/misc.m8x/fix-mmc-on-reboot.patch
+# fix mali interrupts
+patch -p1 < /compile/doc/stable-xd/misc.m8x/remove-unused-mali-interrupts.patch
 # add more dtbs: m8s with dvfs via pwm and mxiii based on m8 and not m8m2
 patch -p1 < /compile/doc/stable-xd/misc.m8x/add-extra-dtbs-to-dts-makefile.patch
 cp /compile/doc/stable-xd/misc.m8x/dtb/*.dts* arch/arm/boot/dts

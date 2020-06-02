@@ -1,0 +1,15 @@
+see: https://patchwork.kernel.org/patch/11582619/
+
+diff --git a/arch/arm/boot/dts/meson8.dtsi b/arch/arm/boot/dts/meson8.dtsi
+index 5e2d3e1b936e..21017a982c5e 100644
+--- a/arch/arm/boot/dts/meson8.dtsi
++++ b/arch/arm/boot/dts/meson8.dtsi
+@@ -324,8 +324,6 @@
+ 				     <GIC_SPI 167 IRQ_TYPE_LEVEL_HIGH>,
+ 				     <GIC_SPI 168 IRQ_TYPE_LEVEL_HIGH>,
+ 				     <GIC_SPI 169 IRQ_TYPE_LEVEL_HIGH>,
+-				     <GIC_SPI 170 IRQ_TYPE_LEVEL_HIGH>,
+-				     <GIC_SPI 171 IRQ_TYPE_LEVEL_HIGH>,
+ 				     <GIC_SPI 172 IRQ_TYPE_LEVEL_HIGH>,
+ 				     <GIC_SPI 173 IRQ_TYPE_LEVEL_HIGH>,
+ 				     <GIC_SPI 174 IRQ_TYPE_LEVEL_HIGH>,
