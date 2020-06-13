@@ -19,7 +19,7 @@ patch -p1 < /compile/doc/stable-xd/misc.m8x/fix-mmc-on-reboot.patch
 patch -p1 < /compile/doc/stable-xd/misc.m8x/remove-unused-mali-interrupts.patch
 # add more dtbs: m8s with dvfs via pwm and mxiii based on m8 and not m8m2
 patch -p1 < /compile/doc/stable-xd/misc.m8x/add-extra-dtbs-to-dts-makefile.patch
-cp /compile/doc/stable-xd/misc.m8x/dtb/*.dts* arch/arm/boot/dts
+cp -i /compile/doc/stable-xd/misc.m8x/dtb/*.dts* arch/arm/boot/dts
 # minimal s805 overclocking
 #patch -p1 < /compile/doc/stable-xd/misc.m8x/minimal-s805-overclocking.patch
 # strip the extra version from the makefile as the old u-boot does
