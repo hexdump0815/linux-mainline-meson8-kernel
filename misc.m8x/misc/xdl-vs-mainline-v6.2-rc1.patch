@@ -1,3 +1,17 @@
+just in case i should at any point in time try to create a v6.1 m8x tree
+this diff might be a good start - it seems to apply cleanly to v6.1 and
+should contain everything for meson8 not yet in mainline
+
+this patch has been created via:
+
+cd /compile/source/linux-stable-repo/
+git pull
+git worktree add ../linux-stable-xdl v6.2-rc1
+cd ../linux-stable-xdl/
+git remote add xdl https://github.com/xdarklight/linux.git
+git remote update
+git diff v6.2-rc1 remotes/xdl/meson-mx-integration-6.2-20221226
+
 diff --git a/Documentation/devicetree/bindings/arm/amlogic.yaml b/Documentation/devicetree/bindings/arm/amlogic.yaml
 index e16b5fa55847..18eb1786963d 100644
 --- a/Documentation/devicetree/bindings/arm/amlogic.yaml
